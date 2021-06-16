@@ -18,6 +18,15 @@ body{
     margin: auto;
     overflow: hidden;
 }
+.container-nav{
+    width: 100%;
+    margin: auto;
+    /* width: 100%;
+    clear: both;
+    display: inline-block;
+    box-sizing: border-box; */
+    /* overflow: hidden; */
+}
 .container-small{
     width: 90%;
     margin: auto;
@@ -77,15 +86,18 @@ nav{
 }
 .main-nav .main-menu{
     flex: 1;
-    margin-left:80px ;
+    margin-left:60px ;
 }
 .main-menu li{
     margin-right: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    /* transition: all 0.3; */
+    padding: 8px 0;
+    position: relative;
 }
 .main-menu a:hover,.main-nav .right-menu i:hover,select#moreinfo option:hover ,.slider-heading:hover,.footer-list li a:hover{
-    transition: .4s;
+    transition:all .3s;
     color: #ff4a32;
 }
 .main-nav .right-menu i{
@@ -94,12 +106,40 @@ nav{
 .main-nav .right-menu{
     font-weight: bold;
 }
-select#more-info {
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #fff;
+
+/* drop down */
+.main-menu  li ul{
+    position: absolute;
+    background-color:#fff;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 200px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.main-menu  li ul li{
+    margin-left: 20px;
+    font-size: 13px;
+    text-transform: capitalize;
+   
+}
+.main-menu  li i{
+    margin-left: 12px;
+    transition: all 0.3s;
+}
+.main-menu li ul li:first-child {
+    margin-top: 20px;
+}
+.main-menu  li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+.main-menu  li:hover i{
+    transform: rotate(180deg);
 }
 
 
